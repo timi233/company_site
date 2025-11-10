@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import CaseCard from '../components/business/CaseCard.astro';
+import type { Case } from '../types';
+
+const cases = (await import('../data/cases.json')).default as Case[];
+---
+<BaseLayout
+  title="客户案例"
+  description="覆盖制造、金融、能源等行业的客户成功案例，展示数擎科技的交付能力。"
+>
+  <section class="space-y-6">
+    <div class="text-center">
+      <p class="text-sm font-semibold text-brand-500">Customer Success</p>
+      <h1 class="section-title">标杆客户故事</h1>
+      <p class="mt-3 text-slate-600">
+        以业务指标衡量项目价值，通过联合创新与迭代运营，帮助客户实现长期增长。
+      </p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2">
+      {cases.map((item) => <CaseCard item={item} />)}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,42 @@
+---
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import '../../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = '数擎科技 - 企业级数据与安全专家',
+  description = '提供数据保护、终端安全、数字化转型等全栈解决方案，助力企业打造可信数字底座。'
+} = Astro.props as Props;
+
+const pageTitle = title.includes('数擎科技') ? title : `${title} | 数擎科技`;
+const canonical = new URL(Astro.url.pathname, 'https://10.242.94.9:4321');
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical.toString()} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <link rel="canonical" href={canonical.toString()} />
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-900">
+    <Header />
+    <main class="mx-auto max-w-6xl px-4 py-12">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

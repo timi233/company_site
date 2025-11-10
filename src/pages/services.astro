@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import type { Service } from '../types';
+
+const services = (await import('../data/services.json')).default as Service[];
+---
+<BaseLayout
+  title="技术服务"
+  description="提供咨询规划、集成实施、托管运营与培训赋能的全生命周期技术服务。"
+>
+  <section class="space-y-6">
+    <div class="text-center">
+      <p class="text-sm font-semibold text-brand-500">Professional Services</p>
+      <h1 class="section-title">端到端交付能力</h1>
+      <p class="mt-3 text-slate-600">
+        由资深架构师与驻场团队协同，覆盖项目规划、上线、运营与持续优化，确保业务稳定和投资可回报。
+      </p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2">
+      {services.map((service) => (
+        <div class="card-surface flex flex-col gap-4 p-6">
+          <div class="flex items-center gap-3">
+            <div class="h-12 w-12 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-xl">
+              {service.icon ? <img src={service.icon} alt={service.title} class="h-8 w-8" loading="lazy" /> : '∎'}
+            </div>
+            <div>
+              <p class="text-lg font-semibold text-slate-900">{service.title}</p>
+              <p class="text-sm text-slate-500">{service.description}</p>
+            </div>
+          </div>
+          <ul class="space-y-1 text-sm text-slate-600">
+            {service.scope.map((item) => (
+              <li class="flex gap-2">
+                <span class="text-brand-400">✓</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

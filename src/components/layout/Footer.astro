@@ -1,0 +1,38 @@
+---
+const quickLinks = [
+  { label: '产品中心', href: '/products' },
+  { label: '解决方案', href: '/solutions' },
+  { label: '技术服务', href: '/services' },
+  { label: '客户案例', href: '/cases' },
+  { label: '合作伙伴', href: '/partners' },
+  { label: '渠道加盟', href: '/join' }
+];
+---
+<footer class="border-t border-slate-200 bg-slate-900 text-slate-200">
+  <div class="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-3">
+    <div>
+      <p class="text-lg font-semibold text-white">山东普悦天诚信息科技有限公司</p>
+      <p class="mt-3 text-sm text-slate-400">
+        立足山东，聚焦终端安全、数据中心与零信任访问，面向企业提供专业的IT解决方案与技术服务。
+      </p>
+      <p class="mt-4 text-xs text-slate-500">© {new Date().getFullYear()} 山东普悦天诚信息科技有限公司 · 保留所有权利</p>
+    </div>
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-wide text-slate-400">快速链接</p>
+      <div class="mt-3 grid grid-cols-2 gap-2 text-sm">
+        {quickLinks.map((item) => (
+          <a href={item.href} class="text-slate-300 hover:text-white">{item.label}</a>
+        ))}
+      </div>
+    </div>
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-wide text-slate-400">联系方式</p>
+      <ul class="mt-3 space-y-2 text-sm">
+        <li>邮箱：info@purytech.cn</li>
+        <li>电话：18660780581</li>
+        <li>济南办公室：山东省济南市高新区舜华路街道凤凰北路涵园新居3号楼底商1-101</li>
+        <li>青岛办公室：青岛市市北区连云港路66号青岛国际航运中心3102</li>
+      </ul>
+    </div>
+  </div>
+</footer>

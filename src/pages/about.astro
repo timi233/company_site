@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import type { CompanyInfo } from '../types';
+
+const company = (await import('../data/company.json')).default as CompanyInfo;
+---
+<BaseLayout
+  title="关于我们"
+  description="了解普悦天诚（PYTC）的使命、愿景与业务布局，获取山东本地化服务能力详情。"
+>
+  <section class="space-y-10">
+    <div class="text-center">
+      <p class="text-sm font-semibold text-brand-500">Company Profile</p>
+      <h1 class="section-title">{company.name}</h1>
+      <p class="mt-3 text-xl text-slate-600">{company.shortName} · {company.englishAbbr}</p>
+      <p class="mt-2 text-slate-600">{company.slogan}</p>
+      <p class="mt-2 text-slate-600">{company.description}</p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-3">
+      {[
+        { title: '使命 Mission', content: company.mission },
+        { title: '愿景 Vision', content: company.vision },
+        { title: '价值观 Values', content: company.values.join(' · ') }
+      ].map((item) => (
+        <div class="card-surface p-6">
+          <p class="text-sm font-semibold text-brand-500">{item.title}</p>
+          <p class="mt-2 text-base text-slate-800">{item.content}</p>
+        </div>
+      ))}
+    </div>
+    <div class="grid gap-6 md:grid-cols-2">
+      <div class="card-surface p-6">
+        <h2 class="text-lg font-semibold text-slate-900">核心业务</h2>
+        <p class="mt-2 text-sm text-slate-600">
+          聚焦终端一体化安全、数据中心备份容灾与零信任访问三大方向，提供咨询规划、产品集成、培训运维全流程服务。
+        </p>
+      </div>
+      <div class="card-surface p-6">
+        <h2 class="text-lg font-semibold text-slate-900">服务网络</h2>
+        <p class="mt-2 text-sm text-slate-600">
+          依托济南总部与青岛交付中心，辐射山东全域客户，提供7x24本地化响应与驻场服务。
+        </p>
+      </div>
+    </div>
+    <div class="card-surface p-6">
+      <h2 class="text-lg font-semibold text-slate-900">联系我们</h2>
+      <ul class="mt-3 space-y-2 text-sm text-slate-600">
+        <li>邮箱：{company.contact.email}</li>
+        <li>电话：{company.contact.phone}</li>
+        <li>济南办公室：{company.contact.jinanOffice}</li>
+        <li>青岛办公室：{company.contact.qingdaoOffice}</li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

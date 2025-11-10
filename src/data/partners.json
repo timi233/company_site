@@ -1,0 +1,51 @@
+[
+  {
+    "id": "partner-eisoo",
+    "name": "爱数 (Eisoo)",
+    "category": "战略合作伙伴",
+    "logo": "/logos/partner.svg",
+    "website": "https://www.aishu.cn"
+  },
+  {
+    "id": "partner-ipguard",
+    "name": "IP-Guard",
+    "category": "核心代理厂商",
+    "logo": "/logos/partner.svg",
+    "website": "https://www.ip-guard.com"
+  },
+  {
+    "id": "partner-huorong",
+    "name": "火绒安全 (Huorong)",
+    "category": "核心代理厂商",
+    "logo": "/logos/partner.svg",
+    "website": "https://www.huorong.cn"
+  },
+  {
+    "id": "partner-eaglecloud",
+    "name": "亿格云 (EagleCloud)",
+    "category": "战略合作伙伴",
+    "logo": "/logos/partner.svg",
+    "website": "https://www.eaglecloud.com"
+  },
+  {
+    "id": "partner-nsfocus",
+    "name": "绿盟科技 (NSFOCUS)",
+    "category": "战略合作伙伴",
+    "logo": "/logos/partner.svg",
+    "website": "https://www.nsfocus.com.cn"
+  },
+  {
+    "id": "partner-qianxin",
+    "name": "奇安信 (Qianxin)",
+    "category": "战略合作伙伴",
+    "logo": "/logos/partner.svg",
+    "website": "https://www.qianxin.com"
+  },
+  {
+    "id": "partner-sangfor",
+    "name": "深信服 (Sangfor)",
+    "category": "战略合作伙伴",
+    "logo": "/logos/partner.svg",
+    "website": "https://www.sangfor.com.cn"
+  }
+]

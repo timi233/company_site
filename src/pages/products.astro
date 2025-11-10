@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import ProductCard from '../components/business/ProductCard.astro';
+import type { Product } from '../types';
+
+const products = (await import('../data/products.json')).default as Product[];
+---
+<BaseLayout
+  title="产品中心"
+  description="覆盖数据保护、内容协作、终端安全与应用防护的企业级产品矩阵。"
+>
+  <section class="space-y-6">
+    <div class="text-center">
+      <p class="text-sm font-semibold text-brand-500">Product Portfolio</p>
+      <h1 class="section-title">企业数字底座核心产品</h1>
+      <p class="mt-3 text-slate-600">
+        精选国内领先厂商的旗舰方案，通过统一交付体系确保兼容、可信与可持续迭代。
+      </p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {products.map((product) => (
+        <ProductCard product={product} />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

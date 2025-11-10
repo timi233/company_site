@@ -1,0 +1,34 @@
+---
+import type { Case } from '../../types';
+
+interface Props {
+  item: Case;
+}
+
+const { item } = Astro.props as Props;
+---
+<div class="card-surface flex flex-col gap-4 p-6">
+  <div class="flex items-center gap-4">
+    {item.logo ? (
+      <img src={item.logo} alt={item.companyName} class="h-12 w-12 rounded-xl bg-slate-100 object-contain p-2" loading="lazy" />
+    ) : (
+      <div class="h-12 w-12 rounded-xl bg-slate-100 flex items-center justify-center text-sm font-semibold text-slate-600">
+        {item.companyName.slice(0, 2)}
+      </div>
+    )}
+    <div>
+      <p class="text-base font-semibold text-slate-900">{item.companyName}</p>
+      <p class="text-xs text-slate-500">{item.industry} · {item.scale}</p>
+    </div>
+  </div>
+  <div class="space-y-2 text-sm text-slate-600">
+    <p><span class="font-semibold text-slate-500">挑战：</span>{item.challenge}</p>
+    <p><span class="font-semibold text-slate-500">方案：</span>{item.solution}</p>
+    <p><span class="font-semibold text-slate-500">成效：</span>{item.result}</p>
+  </div>
+  <div class="flex flex-wrap gap-2 text-xs text-brand-600">
+    {item.products.map((product) => (
+      <span class="rounded-full border border-brand-100 bg-brand-50 px-3 py-1">{product}</span>
+    ))}
+  </div>
+</div>

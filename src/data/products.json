@@ -1,0 +1,145 @@
+[
+  {
+    "id": "ipguard",
+    "name": "IP-Guard 终端安全管控",
+    "vendor": "IP-Guard",
+    "category": "终端安全",
+    "description": "通过审计、授权、加密三重机制实现终端全栈安全防护，满足涉密与合规管控需求。",
+    "features": [
+      "透明加密与文档追踪",
+      "外设与设备精细化管控",
+      "屏幕水印与操作留痕",
+      "网络准入与行为审计"
+    ]
+  },
+  {
+    "id": "huorong-enterprise",
+    "name": "火绒安全企业版",
+    "vendor": "火绒安全",
+    "category": "终端安全",
+    "description": "集病毒查杀、系统加固与集中管控于一体，构建EDR级终端防护体系。",
+    "features": [
+      "本地病毒查杀引擎",
+      "19项防护策略中心",
+      "系统加固与漏洞修复",
+      "集中策略管控"
+    ]
+  },
+  {
+    "id": "anyshare",
+    "name": "爱数 AnyShare 智能内容协作平台",
+    "vendor": "爱数",
+    "category": "内容协作",
+    "description": "打造企业文件中枢，支持零信任访问、语义检索与多终端在线协同。",
+    "features": [
+      "文件集中管理",
+      "权限精细控制",
+      "全文检索与智能分类",
+      "在线协作与全程审计"
+    ]
+  },
+  {
+    "id": "eaglecloud-sase",
+    "name": "亿格云 零信任SASE",
+    "vendor": "亿格云",
+    "category": "网络安全",
+    "description": "基于ZTNA架构的云原生SASE平台，保障远程办公与分支接入安全。",
+    "features": [
+      "应用级访问控制",
+      "动态身份验证",
+      "细粒度权限管理",
+      "统一分支管控"
+    ]
+  },
+  {
+    "id": "anybackup",
+    "name": "爱数 AnyBackup 企业级数据备份",
+    "vendor": "爱数",
+    "category": "数据保护",
+    "description": "覆盖物理、虚拟与云平台的统一备份方案，支持永久增量与快速恢复。",
+    "features": [
+      "统一备份管理",
+      "虚拟化与数据库备份",
+      "云平台与对象存储保护",
+      "重删压缩与快速恢复"
+    ]
+  },
+  {
+    "id": "nsfocus-waf",
+    "name": "绿盟科技 WAF Web应用防火墙",
+    "vendor": "绿盟科技",
+    "category": "应用安全",
+    "description": "多引擎检测WAF，连续多年位列中国硬件WAF市场第一。",
+    "features": [
+      "OWASP Top10防护",
+      "DDoS联动防御",
+      "规则+语义+智能引擎",
+      "多样化部署模式"
+    ]
+  },
+  {
+    "id": "nsfocus-wvss",
+    "name": "绿盟科技 WVSS 漏洞扫描系统",
+    "vendor": "绿盟科技",
+    "category": "应用安全",
+    "description": "分钟级完成配置的Web应用漏洞扫描平台，生成高可信风险报告。",
+    "features": [
+      "Web漏洞全面检测",
+      "风险评估与分级",
+      "合规基线检查",
+      "自定义报表输出"
+    ]
+  },
+  {
+    "id": "qianxin-tianqing",
+    "name": "奇安信 天擎终端安全管理系统",
+    "vendor": "奇安信",
+    "category": "终端安全",
+    "description": "基于“川陀”平台的终端安全管控方案，融合QAX-GPT安全大模型。",
+    "features": [
+      "病毒查杀与主动防御",
+      "漏洞检测与加固",
+      "终端准入与策略控制",
+      "可视化运营中心"
+    ]
+  },
+  {
+    "id": "qianxin-edr",
+    "name": "奇安信 EDR 终端安全响应系统",
+    "vendor": "奇安信",
+    "category": "威胁检测",
+    "description": "集威胁检测、自动响应与终端隔离于一体，支持AI威胁溯源。",
+    "features": [
+      "多维威胁检测",
+      "AI溯源分析",
+      "自动化响应剧本",
+      "终端隔离与恢复"
+    ]
+  },
+  {
+    "id": "sangfor-atrust",
+    "name": "深信服 aTrust 零信任访问控制系统",
+    "vendor": "深信服",
+    "category": "零信任",
+    "description": "通过网络隐身、动态认证与终端检测实现身份中心化的零信任访问。",
+    "features": [
+      "SPA网络隐身",
+      "动态自适应认证",
+      "终端环境检测",
+      "全周期访问控制"
+    ]
+  },
+  {
+    "id": "sangfor-iam",
+    "name": "深信服 上网行为管理系统",
+    "vendor": "深信服",
+    "category": "网络安全",
+    "description": "集上网流量管理、应用识别与合规审计于一体的行为管理平台。",
+    "features": [
+      "上网流量精细管控",
+      "应用识别与封堵",
+      "行为审计取证",
+      "合规报表输出"
+    ]
+  }
+]

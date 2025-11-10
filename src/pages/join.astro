@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import type { Partner, Service } from '../types';
+
+const partners = (await import('../data/partners.json')).default as Partner[];
+const services = (await import('../data/services.json')).default as Service[];
+const enablement = services.slice(0, 2);
+---
+<BaseLayout
+  title="渠道加盟"
+  description="携手生态伙伴共同拓展数字化市场，为客户提供更具竞争力的解决方案。"
+>
+  <section class="space-y-8">
+    <div class="text-center">
+      <p class="text-sm font-semibold text-brand-500">Partner Program</p>
+      <h1 class="section-title">成为数擎生态伙伴</h1>
+      <p class="mt-3 text-slate-600">
+        提供商业机会共享、联合售前支持与交付赋能，与伙伴一同服务区域与行业客户。
+      </p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-3">
+      {[
+        { title: '商业共赢', content: '共享重点项目线索，联合制定报价策略。' },
+        { title: '技术赋能', content: '提供厂商认证课程与专家驻场支持。' },
+        { title: '市场联合', content: '共同举办行业沙龙及线上营销活动。' }
+      ].map((item) => (
+        <div class="card-surface p-6">
+          <p class="text-lg font-semibold text-slate-900">{item.title}</p>
+          <p class="mt-2 text-sm text-slate-600">{item.content}</p>
+        </div>
+      ))}
+    </div>
+    <div class="space-y-4">
+      <h2 class="section-title text-center">核心生态厂商</h2>
+      <div class="grid gap-4 md:grid-cols-3">
+        {partners.slice(0, 6).map((partner) => (
+          <div class="card-surface p-4 text-center">
+            <p class="text-base font-semibold text-slate-900">{partner.name}</p>
+            <p class="text-sm text-slate-500">{partner.category}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+    <div class="space-y-4">
+      <h2 class="section-title text-center">赋能与支持</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        {enablement.map((service) => (
+          <div class="card-surface p-6">
+            <p class="text-lg font-semibold text-slate-900">{service.title}</p>
+            <p class="mt-2 text-sm text-slate-600">{service.description}</p>
+            <ul class="mt-3 space-y-1 text-sm text-slate-500">
+              {service.scope.map((item) => (
+                <li>· {item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+    <div class="card-surface p-6 text-center">
+      <p class="text-lg font-semibold text-slate-900">提交合作意向</p>
+      <p class="mt-2 text-sm text-slate-600">发送邮件至 partner@dataforce.com 或拨打 400-800-9000，我们将在 1 个工作日内联系您。</p>
+      <a href="mailto:partner@dataforce.com" class="mt-4 inline-flex rounded-full bg-brand-500 px-6 py-3 text-white">立即联系</a>
+    </div>
+  </section>
+</BaseLayout>

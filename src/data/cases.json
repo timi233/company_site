@@ -1,0 +1,42 @@
+[
+  {
+    "id": "case-auto",
+    "companyName": "华粤汽车集团",
+    "industry": "汽车制造",
+    "scale": "3万+员工",
+    "challenge": "多地工厂数据割裂，研发工艺资料无法安全共享。",
+    "solution": "部署AnyShare知识枢纽与私有云存储，结合零信任权限模型。",
+    "result": "项目交付后，跨工厂协同效率提升47%，文档泄露事件为零。",
+    "products": ["anyshare"]
+  },
+  {
+    "id": "case-bank",
+    "companyName": "东盛商业银行",
+    "industry": "银行",
+    "scale": "400+网点",
+    "challenge": "备份系统老旧，无法满足等保2.0与金融监管演练。",
+    "solution": "以AnyBackup构建双活数据保护平台，自动化演练系统季度验证。",
+    "result": "全行关键系统恢复时间缩短至15分钟，合规检查一次通过。",
+    "products": ["anybackup"]
+  },
+  {
+    "id": "case-chip",
+    "companyName": "星昱半导体",
+    "industry": "集成电路",
+    "scale": "5000+工程师",
+    "challenge": "终端数据分散且缺乏统一管控，频繁出现敏感资料外发。",
+    "solution": "部署IP-Guard与深信服EDR联动，实施策略化访问与威胁响应。",
+    "result": "敏感数据外泄风险降低80%，安全事件平均响应时间缩短60%。",
+    "products": ["ipguard", "sangfor-edr"]
+  },
+  {
+    "id": "case-energy",
+    "companyName": "中环能源",
+    "industry": "能源",
+    "scale": "全国22个基地",
+    "challenge": "海量监控日志无法统一分析，缺乏集中告警。",
+    "solution": "引入绿盟云WAF与态势联动平台，实现云边协同防护。",
+    "result": "对外Web攻击阻断率达到99%，安全运营人力节省40%。",
+    "products": ["nsfocus-waf"]
+  }
+]

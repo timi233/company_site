@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import PartnerLogo from '../components/business/PartnerLogo.astro';
+import type { Partner } from '../types';
+
+const partners = (await import('../data/partners.json')).default as Partner[];
+---
+<BaseLayout
+  title="合作伙伴"
+  description="联合爱数、深信服、绿盟等主流厂商构建开放生态，确保方案落地可持续。"
+>
+  <section class="space-y-6">
+    <div class="text-center">
+      <p class="text-sm font-semibold text-brand-500">Alliance Ecosystem</p>
+      <h1 class="section-title">战略合作网络</h1>
+      <p class="mt-3 text-slate-600">
+        通过联合实验室、交付认证与联合营销，共同打造行业场景化解决方案。
+      </p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-3">
+      {partners.map((partner) => <PartnerLogo partner={partner} />)}
+    </div>
+  </section>
+</BaseLayout>

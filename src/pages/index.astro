@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import SolutionCard from '../components/business/SolutionCard.astro';
+import CaseCard from '../components/business/CaseCard.astro';
+import ProductCard from '../components/business/ProductCard.astro';
+import type { Solution, Case, Product, CompanyInfo } from '../types';
+
+const solutions = (await import('../data/solutions.json')).default as Solution[];
+const cases = (await import('../data/cases.json')).default as Case[];
+const products = (await import('../data/products.json')).default as Product[];
+const company = (await import('../data/company.json')).default as CompanyInfo;
+---
+<BaseLayout
+  title="普悦天诚 · 企业IT安全与数据中心服务"
+  description="普悦天诚（PYTC）专注终端安全管控、数据保护与零信任访问，提供咨询、集成与运维一体化服务。"
+>
+  <section class="grid gap-12 lg:grid-cols-2 lg:items-center">
+    <div class="space-y-6">
+      <p class="inline-flex items-center rounded-full border border-brand-100 bg-brand-50 px-4 py-1 text-sm font-medium text-brand-600">
+        {company.shortName} · {company.englishAbbr}
+      </p>
+      <h1 class="text-4xl font-bold text-slate-900 md:text-5xl">
+        终端安全与数据中心一体化专家
+      </h1>
+      <p class="text-xl font-semibold text-brand-500">{company.slogan}</p>
+      <p class="text-lg text-slate-600">{company.description}</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/solutions" class="rounded-full bg-brand-500 px-6 py-3 text-white shadow-elevated">立即了解方案</a>
+        <a href="/services" class="rounded-full border border-slate-200 px-6 py-3 text-slate-700 hover:border-brand-200">预约顾问</a>
+      </div>
+      <dl class="grid gap-6 sm:grid-cols-3">
+        <div>
+          <dt class="text-3xl font-semibold text-slate-900">3000+</dt>
+          <dd class="text-sm text-slate-500">服务企业级客户</dd>
+        </div>
+        <div>
+          <dt class="text-3xl font-semibold text-slate-900">100+</dt>
+          <dd class="text-sm text-slate-500">大型成功交付项目</dd>
+        </div>
+        <div>
+          <dt class="text-3xl font-semibold text-slate-900">7x24</dt>
+          <dd class="text-sm text-slate-500">本地化技术支持</dd>
+        </div>
+      </dl>
+    </div>
+    <div class="grid gap-4">
+      <div class="card-surface p-6">
+        <p class="text-sm font-semibold text-brand-500">核心解决方案</p>
+        <ul class="mt-4 space-y-3 text-slate-600">
+          {solutions.slice(0, 2).map((solution) => (
+            <li>
+              <p class="font-semibold text-slate-900">{solution.title}</p>
+              <p class="text-sm">{solution.description}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="card-surface p-6">
+        <p class="text-sm font-semibold text-brand-500">一站式服务</p>
+        <ul class="mt-4 space-y-2 text-slate-600">
+          <li>· 需求评估与架构设计</li>
+          <li>· 多厂商产品集成与交付</li>
+          <li>· 运营托管与本地化支持</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-16 space-y-6">
+    <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+      <div>
+        <p class="text-sm font-semibold text-brand-500">方案亮点</p>
+        <h2 class="section-title">行业数字化场景</h2>
+      </div>
+      <a href="/solutions" class="text-sm font-semibold text-brand-600">查看全部方案 →</a>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2">
+      {solutions.slice(0, 2).map((solution) => <SolutionCard solution={solution} />)}
+    </div>
+  </section>
+
+  <section class="mt-16 space-y-6">
+    <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+      <div>
+        <p class="text-sm font-semibold text-brand-500">旗舰产品</p>
+        <h2 class="section-title">可信数据与安全矩阵</h2>
+      </div>
+      <a href="/products" class="text-sm font-semibold text-brand-600">查看更多产品 →</a>
+    </div>
+    <div class="grid gap-6 md:grid-cols-3">
+      {products.slice(0, 3).map((product) => <ProductCard product={product} />)}
+    </div>
+  </section>
+
+  <section class="mt-16 space-y-6">
+    <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+      <div>
+        <p class="text-sm font-semibold text-brand-500">客户成功</p>
+        <h2 class="section-title">标杆案例</h2>
+      </div>
+      <a href="/cases" class="text-sm font-semibold text-brand-600">更多案例 →</a>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2">
+      {cases.slice(0, 2).map((item) => <CaseCard item={item} />)}
+    </div>
+  </section>
+</BaseLayout>
