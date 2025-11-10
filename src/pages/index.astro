@@ -9,59 +9,78 @@ const solutions = (await import('../data/solutions.json')).default as Solution[]
 const cases = (await import('../data/cases.json')).default as Case[];
 const products = (await import('../data/products.json')).default as Product[];
 const company = (await import('../data/company.json')).default as CompanyInfo;
+
+const heroStats = [
+  {
+    value: '3000+',
+    label: '服务企业级客户',
+    iconPath: 'M4 18h3V7h3v11h4V4h3v14h3',
+  },
+  {
+    value: '100+',
+    label: '大型成功交付项目',
+    iconPath: 'M5 5h14M5 12h9m-9 7h14',
+  },
+  {
+    value: '7x24',
+    label: '本地化技术支持',
+    iconPath: 'M12 8a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm-7 10a7 7 0 0 1 14 0v2H5z',
+  },
+];
+
+const heroImage = 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&h=720&q=80';
 ---
 <BaseLayout
   title="普悦天诚 · 企业IT安全与数据中心服务"
   description="普悦天诚（PYTC）专注终端安全管控、数据保护与零信任访问，提供咨询、集成与运维一体化服务。"
 >
-  <section class="grid gap-12 lg:grid-cols-2 lg:items-center">
-    <div class="space-y-6">
-      <p class="inline-flex items-center rounded-full border border-brand-100 bg-brand-50 px-4 py-1 text-sm font-medium text-brand-600">
-        {company.shortName} · {company.englishAbbr}
-      </p>
-      <h1 class="text-4xl font-bold text-slate-900 md:text-5xl">
-        终端安全与数据中心一体化专家
-      </h1>
-      <p class="text-xl font-semibold text-brand-500">{company.slogan}</p>
-      <p class="text-lg text-slate-600">{company.description}</p>
-      <div class="flex flex-wrap gap-4">
-        <a href="/solutions" class="rounded-full bg-brand-500 px-6 py-3 text-white shadow-elevated">立即了解方案</a>
-        <a href="/services" class="rounded-full border border-slate-200 px-6 py-3 text-slate-700 hover:border-brand-200">预约顾问</a>
-      </div>
-      <dl class="grid gap-6 sm:grid-cols-3">
-        <div>
-          <dt class="text-3xl font-semibold text-slate-900">3000+</dt>
-          <dd class="text-sm text-slate-500">服务企业级客户</dd>
+  <section class="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-blue-50 via-white to-slate-50 hero-pattern">
+    <div class="absolute -top-20 right-10 h-72 w-72 rounded-full bg-brand-200 opacity-40 blur-3xl"></div>
+    <div class="absolute -bottom-24 -left-5 h-64 w-64 rounded-full bg-sky-200 opacity-40 blur-3xl"></div>
+    <div class="relative mx-auto grid max-w-6xl gap-12 px-6 py-16 lg:grid-cols-2 lg:items-center">
+      <div class="space-y-6">
+        <p class="inline-flex items-center gap-2 rounded-full border border-white/60 bg-white/80 px-4 py-1 text-sm font-medium text-brand-600 shadow-sm backdrop-blur">
+          <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+          {company.shortName} · {company.englishAbbr}
+        </p>
+        <h1 class="text-4xl font-bold text-slate-900 md:text-5xl">
+          终端安全与数据中心一体化专家
+        </h1>
+        <p class="text-xl font-semibold text-brand-500">{company.slogan}</p>
+        <p class="text-lg text-slate-600">{company.description}</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/solutions" class="rounded-full bg-brand-500 px-6 py-3 text-white shadow-elevated">立即了解方案</a>
+          <a href="/services" class="rounded-full border border-slate-200 px-6 py-3 text-slate-700 hover:border-brand-200">预约顾问</a>
         </div>
-        <div>
-          <dt class="text-3xl font-semibold text-slate-900">100+</dt>
-          <dd class="text-sm text-slate-500">大型成功交付项目</dd>
-        </div>
-        <div>
-          <dt class="text-3xl font-semibold text-slate-900">7x24</dt>
-          <dd class="text-sm text-slate-500">本地化技术支持</dd>
-        </div>
-      </dl>
-    </div>
-    <div class="grid gap-4">
-      <div class="card-surface p-6">
-        <p class="text-sm font-semibold text-brand-500">核心解决方案</p>
-        <ul class="mt-4 space-y-3 text-slate-600">
-          {solutions.slice(0, 2).map((solution) => (
-            <li>
-              <p class="font-semibold text-slate-900">{solution.title}</p>
-              <p class="text-sm">{solution.description}</p>
-            </li>
+        <dl class="grid gap-4 sm:grid-cols-3">
+          {heroStats.map((stat) => (
+            <div class="rounded-2xl border border-white/40 bg-white/80 p-4 shadow-lg shadow-slate-200/60 backdrop-blur">
+              <div class="flex items-center gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-100 to-blue-100 text-brand-600">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+                    <path d={stat.iconPath}></path>
+                  </svg>
+                </span>
+                <div>
+                  <dt class="text-3xl font-semibold text-slate-900">{stat.value}</dt>
+                  <dd class="text-sm text-slate-500">{stat.label}</dd>
+                </div>
+              </div>
+            </div>
           ))}
-        </ul>
+        </dl>
       </div>
-      <div class="card-surface p-6">
-        <p class="text-sm font-semibold text-brand-500">一站式服务</p>
-        <ul class="mt-4 space-y-2 text-slate-600">
-          <li>· 需求评估与架构设计</li>
-          <li>· 多厂商产品集成与交付</li>
-          <li>· 运营托管与本地化支持</li>
-        </ul>
+      <div class="relative">
+        <div class="absolute -right-6 -top-6 h-24 w-24 rounded-full border border-white/50 bg-white/70"></div>
+        <div class="absolute -bottom-6 -left-8 h-20 w-20 rounded-2xl border border-blue-100 bg-white/60"></div>
+        <img
+          src={heroImage}
+          alt="团队协作场景"
+          width="900"
+          height="720"
+          loading="lazy"
+          class="image-card rounded-[28px] shadow-2xl shadow-slate-300/80"
+        />
       </div>
     </div>
   </section>

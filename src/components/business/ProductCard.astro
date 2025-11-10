@@ -6,11 +6,117 @@ interface Props {
 }
 
 const { product } = Astro.props as Props;
+
+const productVisuals: Record<string, { image: string; alt: string; gradient: string; icon: string; tagClass: string }> = {
+  ipguard: {
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&h=360&q=80',
+    alt: '终端安全态势监控屏幕',
+    gradient: 'from-brand-200 via-sky-100 to-blue-200',
+    icon: '🛡️',
+    tagClass: 'bg-brand-50 text-brand-600',
+  },
+  'huorong-enterprise': {
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&h=360&q=80',
+    alt: '企业终端安全防护界面',
+    gradient: 'from-amber-100 via-orange-50 to-brand-100',
+    icon: '🔥',
+    tagClass: 'bg-orange-50 text-orange-600',
+  },
+  anyshare: {
+    image: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=600&h=360&q=80',
+    alt: '团队文件协作会议',
+    gradient: 'from-rose-100 via-pink-50 to-blue-100',
+    icon: '🤝',
+    tagClass: 'bg-rose-50 text-rose-600',
+  },
+  'eaglecloud-sase': {
+    image: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=600&h=360&q=80',
+    alt: '云安全网络示意图',
+    gradient: 'from-cyan-100 via-sky-100 to-brand-100',
+    icon: '☁️',
+    tagClass: 'bg-cyan-50 text-cyan-600',
+  },
+  anybackup: {
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&h=360&q=80',
+    alt: '数据中心机房',
+    gradient: 'from-emerald-100 via-teal-50 to-blue-100',
+    icon: '💾',
+    tagClass: 'bg-emerald-50 text-emerald-600',
+  },
+  'nsfocus-waf': {
+    image: 'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=600&h=360&q=80',
+    alt: 'Web应用安全检测',
+    gradient: 'from-violet-100 via-brand-50 to-indigo-100',
+    icon: '🕸️',
+    tagClass: 'bg-violet-50 text-violet-600',
+  },
+  'nsfocus-wvss': {
+    image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=600&h=360&q=80',
+    alt: '漏洞扫描代码',
+    gradient: 'from-fuchsia-100 via-purple-50 to-brand-100',
+    icon: '🧪',
+    tagClass: 'bg-fuchsia-50 text-fuchsia-600',
+  },
+  'qianxin-tianqing': {
+    image: 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=600&h=360&q=80',
+    alt: '终端安全运维中心',
+    gradient: 'from-indigo-100 via-slate-50 to-brand-100',
+    icon: '🛰️',
+    tagClass: 'bg-indigo-50 text-indigo-600',
+  },
+  'qianxin-edr': {
+    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&h=360&q=80',
+    alt: '威胁检测可视化界面',
+    gradient: 'from-blue-100 via-cyan-50 to-brand-100',
+    icon: '⚡',
+    tagClass: 'bg-blue-50 text-blue-600',
+  },
+  'sangfor-atrust': {
+    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&h=360&q=80',
+    alt: '零信任访问示意',
+    gradient: 'from-teal-100 via-emerald-50 to-brand-100',
+    icon: '🔐',
+    tagClass: 'bg-teal-50 text-teal-600',
+  },
+  'sangfor-iam': {
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&h=360&q=80',
+    alt: '网络流量管理界面',
+    gradient: 'from-lime-100 via-green-50 to-brand-100',
+    icon: '📡',
+    tagClass: 'bg-lime-50 text-lime-600',
+  },
+};
+
+const visual = productVisuals[product.id] ?? {
+  image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&h=360&q=80',
+  alt: `${product.name} 场景示意`,
+  gradient: 'from-brand-100 via-blue-50 to-slate-100',
+  icon: '✨',
+  tagClass: 'bg-slate-50 text-slate-600',
+};
 ---
-<div class="card-surface p-6 flex flex-col gap-4">
+<div class="card-surface group flex flex-col gap-4 overflow-hidden p-6">
+  <div class="image-card relative overflow-hidden rounded-2xl">
+    <img
+      src={visual.image}
+      alt={visual.alt}
+      width="600"
+      height="360"
+      loading="lazy"
+      class="h-32 w-full object-cover transition duration-500 group-hover:scale-105"
+    />
+    <span class={`absolute left-4 top-4 inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold shadow-sm ${visual.tagClass}`}>
+      {product.category}
+    </span>
+    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent"></div>
+  </div>
   <div class="flex items-center gap-3">
-    <div class="h-12 w-12 rounded-2xl bg-brand-100 text-brand-600 flex items-center justify-center font-semibold">
-      {product.icon ? <img src={product.icon} alt={product.name} class="h-10 w-10 object-contain" loading="lazy" /> : product.name.slice(0, 2)}
+    <div class={`flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br font-semibold text-xl ${visual.gradient}`}>
+      {product.icon ? (
+        <img src={product.icon} alt={product.name} class="h-10 w-10 object-contain" loading="lazy" />
+      ) : (
+        <span aria-hidden="true">{visual.icon}</span>
+      )}
     </div>
     <div>
       <p class="text-lg font-semibold text-slate-900">{product.name}</p>

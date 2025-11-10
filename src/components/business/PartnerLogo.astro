@@ -9,14 +9,26 @@ const { partner } = Astro.props as Props;
 ---
 <a
   href={partner.website ?? '#'}
-  class="card-surface flex flex-col items-center justify-center gap-3 p-6 text-center"
+  class="card-surface group flex flex-col items-center gap-4 p-6 text-center !rounded-[26px] bg-white/90 backdrop-blur"
   target={partner.website ? '_blank' : undefined}
   rel={partner.website ? 'noreferrer' : undefined}
 >
-  {partner.logo ? (
-    <img src={partner.logo} alt={partner.name} class="h-12 w-32 object-contain" loading="lazy" />
-  ) : (
-    <div class="text-lg font-semibold text-slate-700">{partner.name}</div>
-  )}
-  <p class="text-sm text-slate-500">{partner.category}</p>
+  <div class="image-card relative flex h-16 w-full items-center justify-center rounded-2xl border border-slate-100 bg-gradient-to-br from-slate-50 to-white">
+    {partner.logo ? (
+      <img
+        src={partner.logo}
+        alt={partner.name}
+        width="160"
+        height="64"
+        loading="lazy"
+        class="h-12 w-auto object-contain transition duration-300 group-hover:scale-105"
+      />
+    ) : (
+      <span class="text-lg font-semibold text-slate-600">{partner.name}</span>
+    )}
+  </div>
+  <div>
+    <p class="text-base font-semibold text-slate-900">{partner.name}</p>
+    <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">{partner.category}</p>
+  </div>
 </a>

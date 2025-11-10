@@ -4,12 +4,18 @@ import PartnerLogo from '../components/business/PartnerLogo.astro';
 import type { Partner } from '../types';
 
 const partners = (await import('../data/partners.json')).default as Partner[];
+
+const allianceHighlights = [
+  { title: '联合认证', value: '12+', description: '原厂认证工程师', icon: '🎓' },
+  { title: '生态领域', value: '8', description: '终端 / 数据 / 云 / 零信任', icon: '🧩' },
+  { title: '本地化交付', value: '15年', description: '驻场经验与案例', icon: '🤝' },
+];
 ---
 <BaseLayout
   title="合作伙伴"
   description="联合爱数、深信服、绿盟等主流厂商构建开放生态，确保方案落地可持续。"
 >
-  <section class="space-y-6">
+  <section class="space-y-10">
     <div class="text-center">
       <p class="text-sm font-semibold text-brand-500">Alliance Ecosystem</p>
       <h1 class="section-title">战略合作网络</h1>
@@ -17,8 +23,22 @@ const partners = (await import('../data/partners.json')).default as Partner[];
         通过联合实验室、交付认证与联合营销，共同打造行业场景化解决方案。
       </p>
     </div>
+
     <div class="grid gap-6 md:grid-cols-3">
-      {partners.map((partner) => <PartnerLogo partner={partner} />)}
+      {allianceHighlights.map((item) => (
+        <div class="card-surface flex flex-col items-center gap-3 p-6 text-center">
+          <span class="text-3xl" aria-hidden="true">{item.icon}</span>
+          <p class="text-3xl font-semibold text-slate-900">{item.value}</p>
+          <p class="text-sm font-semibold text-brand-500">{item.title}</p>
+          <p class="text-sm text-slate-600">{item.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="partner-grid rounded-[32px] border border-slate-100 bg-white/90 p-8 shadow-xl">
+      <div class="grid gap-6 md:grid-cols-3 lg:grid-cols-4">
+        {partners.map((partner) => <PartnerLogo partner={partner} />)}
+      </div>
     </div>
   </section>
 </BaseLayout>

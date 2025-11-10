@@ -3,49 +3,49 @@
     "id": "partner-eisoo",
     "name": "爱数 (Eisoo)",
     "category": "战略合作伙伴",
-    "logo": "/logos/partner.svg",
+    "logo": "https://logo.clearbit.com/aishu.cn",
     "website": "https://www.aishu.cn"
   },
   {
     "id": "partner-ipguard",
     "name": "IP-Guard",
     "category": "核心代理厂商",
-    "logo": "/logos/partner.svg",
+    "logo": "https://logo.clearbit.com/ip-guard.com",
     "website": "https://www.ip-guard.com"
   },
   {
     "id": "partner-huorong",
     "name": "火绒安全 (Huorong)",
     "category": "核心代理厂商",
-    "logo": "/logos/partner.svg",
+    "logo": "https://logo.clearbit.com/huorong.cn",
     "website": "https://www.huorong.cn"
   },
   {
     "id": "partner-eaglecloud",
     "name": "亿格云 (EagleCloud)",
     "category": "战略合作伙伴",
-    "logo": "/logos/partner.svg",
+    "logo": "https://logo.clearbit.com/eaglecloud.com",
     "website": "https://www.eaglecloud.com"
   },
   {
     "id": "partner-nsfocus",
     "name": "绿盟科技 (NSFOCUS)",
     "category": "战略合作伙伴",
-    "logo": "/logos/partner.svg",
+    "logo": "https://logo.clearbit.com/nsfocus.com",
     "website": "https://www.nsfocus.com.cn"
   },
   {
     "id": "partner-qianxin",
     "name": "奇安信 (Qianxin)",
     "category": "战略合作伙伴",
-    "logo": "/logos/partner.svg",
+    "logo": "https://logo.clearbit.com/qianxin.com",
     "website": "https://www.qianxin.com"
   },
   {
     "id": "partner-sangfor",
     "name": "深信服 (Sangfor)",
     "category": "战略合作伙伴",
-    "logo": "/logos/partner.svg",
+    "logo": "https://logo.clearbit.com/sangfor.com",
     "website": "https://www.sangfor.com.cn"
   }
 ]

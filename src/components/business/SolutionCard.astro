@@ -6,42 +6,126 @@ interface Props {
 }
 
 const { solution } = Astro.props as Props;
+
+interface IndustryVisual {
+  image: string;
+  icon: string;
+  iconBg: string;
+  alt: string;
+}
+
+const industryVisuals: Record<string, IndustryVisual> = {
+  通用行业: {
+    image: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=440&h=220&q=80',
+    icon: '🌐',
+    iconBg: 'from-brand-100 to-indigo-100',
+    alt: '企业数字化协作场景',
+  },
+  '金融、制造、能源、医疗': {
+    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=440&h=220&q=80',
+    icon: '🏢',
+    iconBg: 'from-amber-100 to-orange-100',
+    alt: '金融与工业综合数据中心',
+  },
+  传统制造: {
+    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=440&h=220&q=80',
+    icon: '🏭',
+    iconBg: 'from-slate-100 to-orange-100',
+    alt: '制造业生产线',
+  },
+  装备制造: {
+    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=440&h=220&q=80',
+    icon: '⚙️',
+    iconBg: 'from-slate-100 to-brand-100',
+    alt: '装备制造车间',
+  },
+  交通运输: {
+    image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=440&h=220&q=80',
+    icon: '🚚',
+    iconBg: 'from-cyan-100 to-blue-100',
+    alt: '交通运输调度中心',
+  },
+  医疗行业: {
+    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=440&h=220&q=80',
+    icon: '🏥',
+    iconBg: 'from-emerald-100 to-teal-100',
+    alt: '现代医疗场景',
+  },
+  金融行业: {
+    image: 'https://images.unsplash.com/photo-1551135049-8a33b5883817?auto=format&fit=crop&w=440&h=220&q=80',
+    icon: '💹',
+    iconBg: 'from-fuchsia-100 to-brand-100',
+    alt: '金融交易大厅',
+  },
+  生物行业: {
+    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=440&h=220&q=80',
+    icon: '🧬',
+    iconBg: 'from-rose-100 to-violet-100',
+    alt: '生物实验室',
+  },
+  化工行业: {
+    image: 'https://images.unsplash.com/photo-1502810190503-830027e1b58c?auto=format&fit=crop&w=440&h=220&q=80',
+    icon: '⚗️',
+    iconBg: 'from-amber-100 to-yellow-100',
+    alt: '化工厂区夜景',
+  },
+  新能源行业: {
+    image: 'https://images.unsplash.com/photo-1509395062183-67c5ad6faff9?auto=format&fit=crop&w=440&h=220&q=80',
+    icon: '🔋',
+    iconBg: 'from-lime-100 to-emerald-100',
+    alt: '新能源电站',
+  },
+};
+
+const visual = industryVisuals[solution.industry] ?? industryVisuals['通用行业'];
 ---
-<div class="card-surface flex flex-col gap-4 p-6">
-  <div class="flex items-start justify-between gap-4">
-    <div>
-      <p class="text-sm font-semibold uppercase tracking-wide text-brand-500">{solution.industry}</p>
-      <h3 class="mt-1 text-xl font-semibold text-slate-900">{solution.title}</h3>
+<div class="image-card rounded-[32px] bg-gradient-to-br from-white via-brand-50 to-blue-50 p-[1px]">
+  <div class="card-surface flex h-full flex-col gap-4 !rounded-[30px] bg-white/95 p-6">
+    <div class="flex items-start justify-between gap-4">
+      <div class="flex items-start gap-3">
+        <span class={`flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br text-xl ${visual.iconBg}`}>
+          <span aria-hidden="true">{visual.icon}</span>
+        </span>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wide text-brand-500">{solution.industry}</p>
+          <h3 class="mt-1 text-xl font-semibold text-slate-900">{solution.title}</h3>
+        </div>
+      </div>
+      <img
+        src={visual.image}
+        alt={`${solution.industry} 场景图`}
+        width="440"
+        height="220"
+        loading="lazy"
+        class="h-20 w-28 rounded-2xl object-cover"
+      />
     </div>
-    {solution.image && (
-      <img src={solution.image} alt={solution.title} class="h-16 w-16 rounded-xl object-cover" loading="lazy" />
-    )}
-  </div>
-  <div>
-    <p class="text-xs font-semibold uppercase text-slate-500">核心痛点</p>
-    <ul class="mt-2 space-y-1 text-sm text-slate-600">
-      {solution.painPoints.map((point) => (
-        <li class="flex gap-2">
-          <span class="text-brand-400">•</span>
-          <span>{point}</span>
-        </li>
+    <div>
+      <p class="text-xs font-semibold uppercase text-slate-500">核心痛点</p>
+      <ul class="mt-2 space-y-1 text-sm text-slate-600">
+        {solution.painPoints.map((point) => (
+          <li class="flex gap-2">
+            <span class="text-brand-400">•</span>
+            <span>{point}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs font-semibold uppercase text-slate-500">解决路径</p>
+      <ul class="mt-2 space-y-1 text-sm text-slate-600">
+        {solution.solutions.map((item) => (
+          <li class="flex gap-2">
+            <span class="text-brand-400">→</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div class="flex flex-wrap gap-2 text-xs font-semibold text-brand-600">
+      {solution.products.map((productId) => (
+        <span class="rounded-full bg-brand-50 px-3 py-1">{productId}</span>
       ))}
-    </ul>
-  </div>
-  <div>
-    <p class="text-xs font-semibold uppercase text-slate-500">解决路径</p>
-    <ul class="mt-2 space-y-1 text-sm text-slate-600">
-      {solution.solutions.map((item) => (
-        <li class="flex gap-2">
-          <span class="text-brand-400">→</span>
-          <span>{item}</span>
-        </li>
-      ))}
-    </ul>
-  </div>
-  <div class="flex flex-wrap gap-2 text-xs font-semibold text-brand-600">
-    {solution.products.map((productId) => (
-      <span class="rounded-full bg-brand-50 px-3 py-1">{productId}</span>
-    ))}
+    </div>
   </div>
 </div>

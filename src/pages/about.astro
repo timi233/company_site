@@ -3,24 +3,93 @@ import BaseLayout from '../components/layout/BaseLayout.astro';
 import type { CompanyInfo } from '../types';
 
 const company = (await import('../data/company.json')).default as CompanyInfo;
+
+const milestones = [
+  { year: '2012', title: '成立与本地化交付', description: '在济南创立，聚焦山东企业终端安全与数据中心服务。' },
+  { year: '2016', title: '联合实验室', description: '与爱数、绿盟等厂商共建联合实验室，打通售前与交付标准。' },
+  { year: '2020', title: '零信任与云管控', description: '引入SASE、零信任与托管运维中心，服务范围覆盖山东全域。' },
+  { year: '2024', title: '行业场景升级', description: '面向制造、医疗、金融推出场景化解决方案与复合型团队。' },
+];
+
+const gallery = [
+  {
+    url: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&h=520&q=80',
+    alt: '现代感十足的开放式办公区',
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=500&h=320&q=80',
+    alt: '项目团队协作讨论',
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=500&h=320&q=80',
+    alt: '数据中心与云平台插图',
+  },
+];
 ---
 <BaseLayout
   title="关于我们"
   description="了解普悦天诚（PYTC）的使命、愿景与业务布局，获取山东本地化服务能力详情。"
 >
-  <section class="space-y-10">
-    <div class="text-center">
-      <p class="text-sm font-semibold text-brand-500">Company Profile</p>
-      <h1 class="section-title">{company.name}</h1>
-      <p class="mt-3 text-xl text-slate-600">{company.shortName} · {company.englishAbbr}</p>
-      <p class="mt-2 text-slate-600">{company.slogan}</p>
-      <p class="mt-2 text-slate-600">{company.description}</p>
+  <section class="space-y-12">
+    <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+      <div class="space-y-4 text-slate-700">
+        <p class="text-sm font-semibold uppercase tracking-wide text-brand-500">Company Profile</p>
+        <h1 class="section-title">{company.name}</h1>
+        <p class="text-xl text-slate-600">{company.shortName} · {company.englishAbbr}</p>
+        <p class="text-brand-500">{company.slogan}</p>
+        <p>{company.description}</p>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="rounded-2xl border border-slate-100 bg-white/80 p-4 shadow-sm">
+            <p class="text-sm font-semibold text-slate-500">服务能力</p>
+            <p class="mt-2 text-2xl font-semibold text-slate-900">7x24 · 本地化交付</p>
+          </div>
+          <div class="rounded-2xl border border-slate-100 bg-white/80 p-4 shadow-sm">
+            <p class="text-sm font-semibold text-slate-500">行业覆盖</p>
+            <p class="mt-2 text-2xl font-semibold text-slate-900">制造 / 医疗 / 金融</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid gap-4">
+        <img
+          src={gallery[0].url}
+          alt={gallery[0].alt}
+          width="900"
+          height="520"
+          loading="lazy"
+          class="image-card rounded-[32px] object-cover"
+        />
+        <div class="grid gap-4 sm:grid-cols-2">
+          <img
+            src={gallery[1].url}
+            alt={gallery[1].alt}
+            width="500"
+            height="320"
+            loading="lazy"
+            class="image-card rounded-2xl object-cover"
+          />
+          <div class="card-surface flex flex-col justify-between gap-3 p-4">
+            <div>
+              <p class="text-sm font-semibold text-brand-500">团队插图</p>
+              <p class="text-sm text-slate-600">架构师、交付顾问与运维团队协同作业，确保方案端到端可落地。</p>
+            </div>
+            <img
+              src={gallery[2].url}
+              alt={gallery[2].alt}
+              width="500"
+              height="320"
+              loading="lazy"
+              class="rounded-xl object-cover"
+            />
+          </div>
+        </div>
+      </div>
     </div>
+
     <div class="grid gap-6 md:grid-cols-3">
       {[
         { title: '使命 Mission', content: company.mission },
         { title: '愿景 Vision', content: company.vision },
-        { title: '价值观 Values', content: company.values.join(' · ') }
+        { title: '价值观 Values', content: company.values.join(' · ') },
       ].map((item) => (
         <div class="card-surface p-6">
           <p class="text-sm font-semibold text-brand-500">{item.title}</p>
@@ -28,6 +97,7 @@ const company = (await import('../data/company.json')).default as CompanyInfo;
         </div>
       ))}
     </div>
+
     <div class="grid gap-6 md:grid-cols-2">
       <div class="card-surface p-6">
         <h2 class="text-lg font-semibold text-slate-900">核心业务</h2>
@@ -42,6 +112,20 @@ const company = (await import('../data/company.json')).default as CompanyInfo;
         </p>
       </div>
     </div>
+
+    <div class="card-surface p-6">
+      <h2 class="text-lg font-semibold text-slate-900">发展时间线</h2>
+      <div class="mt-4 timeline space-y-4 text-sm text-slate-600">
+        {milestones.map((item) => (
+          <div class="timeline-item">
+            <p class="text-base font-semibold text-slate-900">{item.year}</p>
+            <p class="font-medium text-brand-500">{item.title}</p>
+            <p class="mt-1">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
     <div class="card-surface p-6">
       <h2 class="text-lg font-semibold text-slate-900">联系我们</h2>
       <ul class="mt-3 space-y-2 text-sm text-slate-600">
