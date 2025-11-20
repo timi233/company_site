@@ -1,0 +1,122 @@
+[
+  {
+    "id": "partner-eisoo",
+    "name": "爱数",
+    "category": "白金生态伙伴",
+    "logo": "/aishu_logo.png",
+    "website": "https://www.aishu.cn",
+    "certificate": "/aishu.png"
+  },
+  {
+    "id": "partner-ipguard",
+    "name": "溢信科技",
+    "category": "钻石代理商",
+    "logo": "https://logo.clearbit.com/ip-guard.net",
+    "website": "https://www.ip-guard.com",
+    "certificate": "/yixin.png"
+  },
+  {
+    "id": "partner-huorong",
+    "name": "火绒安全",
+    "category": "核心代理商",
+    "logo": "https://logo.clearbit.com/huorong.cn",
+    "website": "https://www.huorong.cn",
+    "certificate": "/huorong.png"
+  },
+  {
+    "id": "partner-eaglecloud",
+    "name": "亿格云",
+    "category": "战略合作伙伴",
+    "logo": "/eaglecloud.svg",
+    "website": "https://www.eaglecloud.com",
+    "certificate": "/eaglecloud.png"
+  },
+  {
+    "id": "partner-nsfocus",
+    "name": "绿盟科技",
+    "category": "战略合作伙伴",
+    "logo": "/lvmeng.png",
+    "website": "https://www.nsfocus.com.cn",
+    "certificate": "/nsfocus.png"
+  },
+  {
+    "id": "partner-tianrongxin",
+    "name": "天融信",
+    "category": "金牌经销商",
+    "logo": "/tianrongxin.jpg",
+    "website": "http://www.topsec.com.cn/",
+    "certificate": "/topsec.png"
+  },
+  {
+    "id": "partner-sangfor",
+    "name": "深信服",
+    "category": "金牌合作伙伴",
+    "logo": "/sanfor.png",
+    "website": "https://www.sangfor.com.cn",
+    "certificate": "/sangfor.png"
+  },
+  {
+    "id": "partner-winicssec",
+    "name": "威努特",
+    "category": "战略合作伙伴",
+    "logo": "/weinute.svg",
+    "website": "https://www.winicssec.com/",
+    "certificate": "/winicssec.png"
+  },
+  {
+    "id": "partner-hillstone",
+    "name": "山石网科",
+    "category": "战略合作伙伴",
+    "logo": "/hillstone-networks-logo.svg",
+    "website": "https://www.hillstonenet.com.cn/",
+    "certificate": "/hillstone.png"
+  },
+  {
+    "id": "partner-skyguard",
+    "name": "天空卫士",
+    "category": "战略合作伙伴",
+    "logo": "https://logo.clearbit.com/skyguard.com.cn",
+    "website": "https://www.skyguard.com.cn/",
+    "certificate": "/skysec.png"
+  },
+  {
+    "id": "partner-sandstone",
+    "name": "杉岩数据",
+    "category": "战略合作伙伴",
+    "logo": "https://logo.clearbit.com/szsandstone.com",
+    "website": "https://www.szsandstone.com/",
+    "certificate": "/shanyan.png"
+  },
+  {
+    "id": "partner-qianxin",
+    "name": "奇安信",
+    "category": "战略合作伙伴",
+    "logo": "https://logo.clearbit.com/qianxin.com",
+    "website": "https://www.qianxin.com/",
+    "certificate": "/qianxin.png"
+  },
+  {
+    "id": "partner-jit",
+    "name": "吉大正元",
+    "category": "战略合作伙伴",
+    "logo": "/jidazhengyuan.png",
+    "website": "https://www.jit.com.cn/",
+    "certificate": "/jidarightone.png"
+  },
+  {
+    "id": "partner-hikvision",
+    "name": "海康威视",
+    "category": "战略合作伙伴",
+    "logo": "https://logo.clearbit.com/hikvision.com",
+    "website": "https://www.hikvision.com/cn/",
+    "certificate": "/hikvision.png"
+  },
+  {
+    "id": "partner-chaitin",
+    "name": "长亭科技",
+    "category": "战略合作伙伴",
+    "logo": "https://logo.clearbit.com/chaitin.cn",
+    "website": "https://www.chaitin.cn/zh/",
+    "certificate": "/chaitin.png"
+  }
+]

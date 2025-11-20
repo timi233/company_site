@@ -1,0 +1,338 @@
+[
+  {
+    "id": "ipguard",
+    "name": "终端安全管控企业版",
+    "vendor": "IP-Guard",
+    "category": "终端安全",
+    "description": "通过审计、授权、加密三重机制实现终端全栈安全防护，满足涉密与合规管控需求。",
+    "features": [
+      "透明加密与文档追踪",
+      "外设与设备精细化管控",
+      "屏幕水印与操作留痕",
+      "网络准入与行为审计"
+    ],
+    "image": "/IP-Guard_product.png"
+  },
+  {
+    "id": "huorong-enterprise",
+    "name": "终端安全防护企业版",
+    "vendor": "火绒安全",
+    "category": "终端安全",
+    "description": "集病毒查杀、系统加固与集中管控于一体，构建EDR级终端防护体系。",
+    "features": [
+      "本地病毒查杀引擎",
+      "19项防护策略中心",
+      "系统加固与漏洞修复",
+      "集中策略管控"
+    ],
+    "image": "/huorong-product.png"
+  },
+  {
+    "id": "anyshare",
+    "name": "智能内容协作平台企业版",
+    "vendor": "爱数",
+    "category": "内容协作",
+    "description": "打造企业文件中枢，支持零信任访问、语义检索与多终端在线协同。",
+    "features": [
+      "文件集中管理",
+      "权限精细控制",
+      "全文检索与智能分类",
+      "在线协作与全程审计"
+    ],
+    "image": "/aishu-product.png"
+  },
+  {
+    "id": "eaglecloud-sase",
+    "name": "零信任访问控制平台",
+    "vendor": "亿格云",
+    "category": "网络安全",
+    "description": "基于ZTNA架构的云原生SASE平台，保障远程办公与分支接入安全。",
+    "features": [
+      "应用级访问控制",
+      "动态身份验证",
+      "细粒度权限管理",
+      "统一分支管控"
+    ],
+    "image": "/yigeyun_product.png"
+  },
+  {
+    "id": "anybackup",
+    "name": "企业级数据备份系统",
+    "vendor": "爱数",
+    "category": "数据保护",
+    "description": "覆盖物理、虚拟与云平台的统一备份方案，支持永久增量与快速恢复。",
+    "features": [
+      "统一备份管理",
+      "虚拟化与数据库备份",
+      "云平台与对象存储保护",
+      "重删压缩与快速恢复"
+    ],
+    "image": "/beifen_product.png"
+  },
+  {
+    "id": "nsfocus-waf",
+    "name": "Web应用防火墙企业版",
+    "vendor": "绿盟科技",
+    "category": "应用安全",
+    "description": "多引擎检测WAF，连续多年位列中国硬件WAF市场第一。",
+    "features": [
+      "OWASP Top10防护",
+      "DDoS联动防御",
+      "规则+语义+智能引擎",
+      "多样化部署模式"
+    ],
+    "image": "/lvmeng-waf_product.png"
+  },
+  {
+    "id": "nsfocus-wvss",
+    "name": "Web漏洞扫描系统",
+    "vendor": "绿盟科技",
+    "category": "应用安全",
+    "description": "分钟级完成配置的Web应用漏洞扫描平台，生成高可信风险报告。",
+    "features": [
+      "Web漏洞全面检测",
+      "风险评估与分级",
+      "合规基线检查",
+      "自定义报表输出"
+    ],
+    "image": "/lvmeng-lousao_product.png"
+  },
+  {
+    "id": "qianxin-tianqing",
+    "name": "终端安全管理系统企业版",
+    "vendor": "奇安信",
+    "category": "终端安全",
+    "description": "基于川陀平台的终端安全管控方案，融合QAX-GPT安全大模型。",
+    "features": [
+      "病毒查杀与主动防御",
+      "漏洞检测与加固",
+      "终端准入与策略控制",
+      "可视化运营中心"
+    ],
+    "image": "/qianxin-zhongduananquan_product.png"
+  },
+  {
+    "id": "qianxin-edr",
+    "name": "终端威胁检测响应系统",
+    "vendor": "奇安信",
+    "category": "威胁检测",
+    "description": "集威胁检测、自动响应与终端隔离于一体，支持AI威胁溯源。",
+    "features": [
+      "多维威胁检测",
+      "AI溯源分析",
+      "自动化响应剧本",
+      "终端隔离与恢复"
+    ],
+    "image": "/qianxin-weixiejiance_product.png"
+  },
+  {
+    "id": "sangfor-atrust",
+    "name": "零信任访问控制系统",
+    "vendor": "深信服",
+    "category": "零信任",
+    "description": "通过网络隐身、动态认证与终端检测实现身份中心化的零信任访问。",
+    "features": [
+      "SPA网络隐身",
+      "动态自适应认证",
+      "终端环境检测",
+      "全周期访问控制"
+    ],
+    "image": "/sanfor-lingxinren_product.png"
+  },
+  {
+    "id": "sangfor-iam",
+    "name": "上网行为管理系统",
+    "vendor": "深信服",
+    "category": "网络安全",
+    "description": "集上网流量管理、应用识别与合规审计于一体的行为管理平台。",
+    "features": [
+      "上网流量精细管控",
+      "应用识别与封堵",
+      "行为审计取证",
+      "合规报表输出"
+    ],
+    "image": "/sanfor-shangwangxingweiguanli_product.png"
+  },
+  {
+    "id": "tianrongxin-ngfw",
+    "name": "下一代防火墙企业版",
+    "vendor": "天融信",
+    "category": "网络安全",
+    "description": "国内领先的下一代防火墙产品，集防火墙、IPS、防病毒等多重安全功能于一体。",
+    "features": [
+      "应用层深度检测",
+      "入侵防御与威胁情报",
+      "SSL/IPSec VPN",
+      "可视化安全策略管理"
+    ],
+    "image": "/tianrongxin_NGFW_product.png"
+  },
+  {
+    "id": "winicssec-firewall",
+    "name": "工控安全防火墙",
+    "vendor": "威努特",
+    "category": "工控安全",
+    "description": "专为工业控制系统设计的安全防护产品，支持多种工控协议深度检测。",
+    "features": [
+      "工控协议深度解析",
+      "白名单访问控制",
+      "异常行为检测",
+      "工业网络隔离防护"
+    ],
+    "image": "/weinute-gongkongfanghuoqiang_product.png"
+  },
+  {
+    "id": "hillstone-ngfw",
+    "name": "智能下一代防火墙",
+    "vendor": "山石网科",
+    "category": "网络安全",
+    "description": "集成AI威胁检测的智能防火墙，提供边界安全与威胁防护。",
+    "features": [
+      "AI驱动威胁检测",
+      "应用识别与控制",
+      "入侵防御系统",
+      "统一安全管理平台"
+    ],
+    "image": "/hillstone-ngfw.jpg"
+  },
+  {
+    "id": "skyguard-dlp",
+    "name": "数据防泄漏系统",
+    "vendor": "天空卫士",
+    "category": "数据保护",
+    "description": "以人为本的数据安全治理平台，覆盖终端、网络与云端的全方位DLP方案。",
+    "features": [
+      "内容识别与分类",
+      "终端DLP与外设管控",
+      "网络DLP与邮件审计",
+      "云端数据保护"
+    ],
+    "image": "/sky-dlp_product.png"
+  },
+  {
+    "id": "sandstone-mos",
+    "name": "分布式对象存储系统",
+    "vendor": "杉岩数据",
+    "category": "数据存储",
+    "description": "企业级分布式对象存储系统，支持海量非结构化数据存储与管理。",
+    "features": [
+      "海量数据存储",
+      "S3协议兼容",
+      "多副本与纠删码",
+      "数据生命周期管理"
+    ],
+    "image": "/shanyan-cunchu_product.png"
+  },
+  {
+    "id": "jit-cert",
+    "name": "电子认证系统",
+    "vendor": "吉大正元",
+    "category": "身份认证",
+    "description": "基于PKI/CA体系的电子认证解决方案，提供数字证书全生命周期管理。",
+    "features": [
+      "数字证书签发与管理",
+      "PKI/CA基础设施",
+      "电子签名与验签",
+      "密钥管理服务"
+    ],
+    "image": "/jidazhengyuan-renzheng_product.png"
+  },
+  {
+    "id": "chaitin-safeline",
+    "name": "新一代Web应用防火墙",
+    "vendor": "长亭科技",
+    "category": "应用安全",
+    "description": "基于智能语义分析的下一代Web应用防火墙，提供精准威胁检测。",
+    "features": [
+      "智能语义分析引擎",
+      "零规则自学习防护",
+      "API安全防护",
+      "Bot管理与防爬虫"
+    ],
+    "image": "/changting-fw_product.png"
+  },
+  {
+    "id": "hikvision-video",
+    "name": "智能安防管理平台",
+    "vendor": "海康威视",
+    "category": "物理安防",
+    "description": "融合AI与物联网技术的智能视频监控与安防管理平台。",
+    "features": [
+      "智能视频分析",
+      "人脸识别与行为分析",
+      "统一安防管理平台",
+      "视频存储与检索"
+    ],
+    "image": "/haikangweishi_product.png"
+  },
+  {
+    "id": "sangfor-ngaf",
+    "name": "下一代应用防火墙",
+    "vendor": "深信服",
+    "category": "网络安全",
+    "description": "集成AI引擎的下一代防火墙，提供应用层深度检测与智能防护。",
+    "features": [
+      "AI驱动威胁检测",
+      "应用层深度防护",
+      "SSL解密与检测",
+      "云端威胁情报联动"
+    ],
+    "image": "/sanfor-NGWAF_product.png"
+  },
+  {
+    "id": "sangfor-adesk",
+    "name": "企业桌面云平台",
+    "vendor": "深信服",
+    "category": "云计算",
+    "description": "企业级桌面云解决方案，提供安全、高效的远程办公体验。",
+    "features": [
+      "GPU虚拟化加速",
+      "统一终端管理",
+      "桌面安全防护",
+      "应用虚拟化交付"
+    ],
+    "image": "/sanfor-adesk_product.png"
+  },
+  {
+    "id": "qianxin-ngsoc",
+    "name": "新一代安全运营中心",
+    "vendor": "奇安信",
+    "category": "安全运营",
+    "description": "基于安全大数据的态势感知与安全运营平台，提供威胁全景分析。",
+    "features": [
+      "全网安全态势感知",
+      "威胁情报分析",
+      "自动化响应编排",
+      "安全事件溯源"
+    ],
+    "image": "/qianxin-anquanyingyingzhongxin_product.png"
+  },
+  {
+    "id": "nsfocus-nti",
+    "name": "网络威胁分析系统",
+    "vendor": "绿盟科技",
+    "category": "威胁检测",
+    "description": "基于流量分析的APT检测系统，识别高级持续性威胁与异常行为。",
+    "features": [
+      "APT攻击检测",
+      "流量行为分析",
+      "威胁情报关联",
+      "可视化攻击链分析"
+    ],
+    "image": "/lvmeng-wangluoxeixiefenxi_product.png"
+  },
+  {
+    "id": "tianrongxin-bastion",
+    "name": "运维安全审计系统",
+    "vendor": "天融信",
+    "category": "运维安全",
+    "description": "企业级运维审计与访问控制系统，实现特权账号管理与操作审计。",
+    "features": [
+      "统一运维接入",
+      "会话全程录像",
+      "特权账号管理",
+      "操作审计与合规"
+    ],
+    "image": "/tianrongxin-yunweianquanshenji_product.png"
+  }
+]
