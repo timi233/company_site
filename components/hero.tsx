@@ -13,7 +13,7 @@ const company = companyData as CompanyInfo
 
 const stats = [
   { target: 800, suffix: "+", label: "服务企业级客户" },
-  { target: 600, suffix: "+", label: "大型成功交付项目" },
+  { target: 120, suffix: "+", label: "大型成功交付项目" },
   { target: 24, prefix: "7×", suffix: "小时响应", label: "本地化技术支持" },
 ]
 

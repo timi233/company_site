@@ -24,7 +24,7 @@ const industryIcons: Record<string, LucideIcon> = {
 const industryCount = new Set(cases.map((item) => item.industry)).size
 
 const stats = [
-  { label: "累计项目交付", value: `${cases.length}+`, accent: "bg-primary" },
+  { label: "累计项目交付", value: "600+", accent: "bg-primary" },
   { label: "覆盖行业", value: `${industryCount}个`, accent: "bg-cyan-400" },
   { label: "客户满意度", value: "98%", accent: "bg-emerald-400" },
 ]
