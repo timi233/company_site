@@ -45,9 +45,9 @@ const stats = [
 ]
 
 const coreValues = [
-  { icon: Eye, title: "愿景 Vision", content: company.vision },
-  { icon: Target, title: "使命 Mission", content: company.mission },
-  { icon: Lightbulb, title: "战略 Strategy", content: company.strategy },
+  { icon: Eye, title: "公司愿景 Vision", content: company.vision },
+  { icon: Target, title: "公司使命 Mission", content: company.mission },
+  { icon: Lightbulb, title: "公司战略 Strategy", content: company.strategy },
   {
     icon: Sparkles,
     title: "经营理念 Philosophy",
