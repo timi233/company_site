@@ -39,7 +39,7 @@ type OfficeLocation = {
 }
 
 const stats = [
-  { label: "服务地区", value: "4城市", accent: "bg-primary" },
+  { label: "服务地区", value: "山东全省", accent: "bg-primary" },
   { label: "产品体系", value: "24+", accent: "bg-cyan-400" },
   { label: "合作伙伴", value: "15家", accent: "bg-emerald-400" },
 ]
@@ -201,7 +201,7 @@ export default function AboutPage() {
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Locations</p>
               <p className="mt-2 text-3xl font-semibold text-gray-900 dark:text-white">服务网络覆盖</p>
               <p className="mt-3 text-base text-gray-700 dark:text-slate-200">
-                覆盖山东主要地区，为您提供快速响应的本地化服务支持。
+                服务覆盖山东全省，济南、青岛、潍坊、临沂四地设有办事处，为您提供快速响应的本地化服务支持。
               </p>
             </div>
             <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
