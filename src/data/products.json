@@ -182,20 +182,6 @@
     "image": "/weinute-gongkongfanghuoqiang_product.png"
   },
   {
-    "id": "hillstone-ngfw",
-    "name": "智能下一代防火墙",
-    "vendor": "山石网科",
-    "category": "网络安全",
-    "description": "集成AI威胁检测的智能防火墙，提供边界安全与威胁防护。",
-    "features": [
-      "AI驱动威胁检测",
-      "应用识别与控制",
-      "入侵防御系统",
-      "统一安全管理平台"
-    ],
-    "image": "/hillstone-ngfw.jpg"
-  },
-  {
     "id": "skyguard-dlp",
     "name": "数据防泄漏系统",
     "vendor": "天空卫士",

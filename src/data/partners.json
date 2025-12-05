@@ -64,14 +64,6 @@
     "certificate": "/winicssec.png"
   },
   {
-    "id": "partner-hillstone",
-    "name": "山石网科",
-    "category": "战略合作伙伴",
-    "logo": "/hillstone-networks-logo.svg",
-    "website": "https://www.hillstonenet.com.cn/",
-    "certificate": "/hillstone.png"
-  },
-  {
     "id": "partner-skyguard",
     "name": "天空卫士",
     "category": "战略合作伙伴",

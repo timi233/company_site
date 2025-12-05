@@ -26,7 +26,6 @@ const productDisplayNames: Record<string, string> = {
   "sangfor-iam": "深信服 IAM",
   "tianrongxin-ngfw": "天融信 NGFW",
   "winicssec-firewall": "威努特工控防火墙",
-  "hillstone-ngfw": "山石网科 NGFW",
   "skyguard-dlp": "天空卫士 DLP",
   "sandstone-mos": "杉岩 MOS",
   "jit-cert": "吉大正元",
